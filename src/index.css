@@ -4,89 +4,97 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Doraemon Theme - Light Mode */
+    --background: 0 0% 100%; /* White */
+    --foreground: 220 15% 25%; /* Dark Slate Grayish for text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: var(--background);
+    --card-foreground: var(--foreground);
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: var(--background);
+    --popover-foreground: var(--foreground);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 204 100% 40%; /* Doraemon Blue (e.g., #0077CC) */
+    --primary-foreground: 0 0% 100%; /* White */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 15% 96%; /* Light Gray (e.g., #f2f4f6) */
+    --secondary-foreground: var(--foreground);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 15% 96%; /* Light Gray (for muted backgrounds) */
+    --muted-foreground: 220 10% 55%; /* Medium Gray (e.g., #7f8c99) */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 0 100% 43%; /* Doraemon Red (e.g., #D90000) */
+    --accent-foreground: 0 0% 100%; /* White */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* New Brand Yellow for Doraemon's Bell / Secondary Accents */
+    --brand-yellow: 51 100% 50%; /* Gold (e.g., #FFD700) */
+    --brand-yellow-foreground: 0 0% 13%; /* Dark text for contrast on yellow */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: 0 80% 55%; /* Clear Red (e.g., #ff4c4c) */
+    --destructive-foreground: 0 0% 100%; /* White */
 
-    --radius: 0.5rem;
+    --border: 220 15% 90%; /* Very Light Gray (e.g., #e0e3e7) */
+    --input: var(--border);
+    --ring: var(--brand-yellow); /* Doraemon Yellow for focus ring */
 
-    --sidebar-background: 0 0% 98%;
+    --radius: 0.625rem; /* 10px for moderately rounded corners */
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --font-sans: "Nunito", "Quicksand", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar - Light Mode */
+    --sidebar-background: 210 60% 98%; /* Very Light Blue */
+    --sidebar-foreground: var(--foreground);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--accent);
+    --sidebar-accent-foreground: var(--accent-foreground);
+    --sidebar-border: 210 30% 90%; /* Lighter Blueish Border */
+    --sidebar-ring: var(--ring);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Doraemon Theme - Dark Mode */
+    --background: 220 15% 10%; /* Very Dark Blue/Gray (e.g., #13171b) */
+    --foreground: 220 10% 85%; /* Light Gray/Off-White (e.g., #ced4da) */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 15% 13%; /* Slightly Lighter Dark (e.g., #1a1f25) */
+    --card-foreground: var(--foreground);
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: var(--card);
+    --popover-foreground: var(--foreground);
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 204 100% 40%; /* Doraemon Blue (kept same as light) */
+    --primary-foreground: 0 0% 100%; /* White */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 15% 18%; /* Darker Gray (e.g., #252a31) */
+    --secondary-foreground: var(--foreground);
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 15% 18%; /* Darker Gray (for muted backgrounds) */
+    --muted-foreground: 220 10% 65%; /* Lighter Medium Gray (e.g., #98a3b0) */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 0 100% 43%; /* Doraemon Red (kept same as light) */
+    --accent-foreground: 0 0% 100%; /* White */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    /* Brand Yellow for Dark Mode (kept same as light for consistency) */
+    --brand-yellow: 51 100% 50%;
+    --brand-yellow-foreground: 0 0% 13%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --destructive: 0 70% 60%; /* Slightly Brighter Red */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 20%; /* Dark Gray Border (e.g., #2a3037) */
+    --input: var(--border);
+    --ring: var(--brand-yellow); /* Doraemon Yellow for focus ring */
+
+    /* Sidebar - Dark Mode */
+    --sidebar-background: 220 15% 15%; /* Darker than main dark bg */
+    --sidebar-foreground: var(--foreground);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--accent);
+    --sidebar-accent-foreground: var(--accent-foreground);
+    --sidebar-border: 220 15% 25%; /* Darker Sidebar Border */
+    --sidebar-ring: var(--ring);
   }
 }
 
@@ -97,5 +105,6 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans); /* Apply the theme font to the body */
   }
 }
